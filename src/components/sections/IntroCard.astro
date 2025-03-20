@@ -1,0 +1,52 @@
+---
+import Card from '../Card.astro'
+import { Button } from '../ui/button'
+import { LINKS } from '../../lib/constants'
+import { Linkedin, Github, Mail } from 'lucide-react'
+---
+
+<Card colSpan="md:col-span-3" rowSpan="md:row-span-4 border border-transparent hover:border-orange-500 transition-colors">
+  <div class="flex h-full w-full">
+    <div class="flex flex-col justify-between gap-4 md:max-h-[300px]">
+      <div class="flex h-full flex-col">
+        <h6 class="m-0 text-sm font-light text-gray-500">Bienvenido</h6>
+        <br>
+        <p class="m-0 text-xl font-light">
+          Hola,<b class="font-bold"> soy Jose Luis Parada</b>, Bienvenido a mi Portfolio.<br>
+          Soy un desarrollador Full Stack apasionado por la tecnología y la creación de soluciones digitales innovadoras. 
+          Con experiencia en el desarrollo tanto del frontend como del backend, disfruto construyendo aplicaciones modernas, escalables y de alto rendimiento.
+        </p>
+      </div>
+      <div class="flex gap-4">
+        <a href={LINKS.github} aria-label="github profile" target="_blank">
+          <Button aria-label="github profile">
+            <Github />
+            <span class="sr-only">GitHub Profile</span>
+          </Button>
+        </a>
+        <a href={LINKS.linkedin} aria-label="linkeding profile" target="_blank">
+          <Button aria-label="linkedin profile">
+            <Linkedin />
+            <span class="sr-only">Linkedin Profile</span>
+          </Button>
+        </a>
+        <a href={LINKS.mail} aria-label="mail profile" target="_blank">
+          <Button>
+            <Mail />
+            <span class="sr-only">Email contact</span>
+          </Button>
+        </a>
+      </div>
+    </div>
+    <img
+   
+    width="200"
+    height="200"
+    src="/JLP.png"
+    class="pointer-events-none mx-auto md:mx-0 md:w-[200px] md:h-[200px] rounded-full"
+    alt="Jose Luis Parada"
+
+  
+    />
+  </div>
+</Card>

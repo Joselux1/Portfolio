@@ -1,0 +1,30 @@
+---
+import Card from '../Card.astro'
+// import { Badge } from '../ui/badge'
+import { STUDIES } from '../../lib/constants'
+---
+
+<Card colSpan="md:col-span-2" rowSpan="md:row-span-1 border border-transparent hover:border-orange-500 transition-colors" title="Certificaciones">
+  <div class="mt-2 grid grid-cols-2 gap-7 w-full">
+    {
+      STUDIES.map((certificate, ) => (  
+        <div  class="flex flex-col items-center">
+          <img 
+            src={certificate.link} 
+            alt={certificate.title} 
+            class="w-64 h-auto rounded-md" 
+          />
+             <a 
+            href={certificate.link} 
+            target="_blank" 
+            class="text-sm text-gray-500 hover:text-orange-500"
+          >
+            {certificate.title}
+          </a>
+
+          <p class="text-sm text-gray-400">{certificate.institution} - {certificate.date}</p>
+        </div>
+      ))
+    }
+  </div>
+</Card>

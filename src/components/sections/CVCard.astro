@@ -13,6 +13,12 @@ const PDF = '/CV-JLP.pdf'
     >
       <figure>
         <object data={PDF} type="application/pdf" width="100%"></object>
+         <!-- Fallback para móviles -->
+      <div class="block sm:hidden text-center p-4 bg-gray-100 rounded-lg">
+        <p class="text-sm text-gray-600">
+          No se puede mostrar la vista previa del PDF en este dispositivo.
+        </p>    
+      </div>
       </figure>
       <div class="mt-4 flex flex-col gap-2">
         <p class="text-sm text-muted-foreground">
